@@ -2,116 +2,90 @@
 <head>
 <meta charset="utf-8" />
 <title>jQuery UI Accordion - Default functionality</title>
-<link rel="stylesheet"
-	href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" />
+
+<!-- <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.0/themes/base/jquery-ui.css" /> -->
+<link rel="stylesheet" href="http://ajax.googleapis.com/ajax/libs/jqueryui/1.9.0/themes/pepper-grinder/jquery-ui.css" />
+	
+	
+	
 <script src="http://code.jquery.com/jquery-1.8.3.js"></script>
 <script src="http://code.jquery.com/ui/1.10.0/jquery-ui.js"></script>
 <script>
-  $(document).ready(function() {
-    $( "#accordion" ).accordion();
-    $( "#main_tabs" ).tabs();
-  
-    $("dialog").dialog();
-  
-  
-  });
-  
-  
-  
-  
-  
-  $( "#dialog_entity_form" ).dialog({
-      autoOpen: false,
-      height: 300,
-      width: 350,
-      modal: true,
-      buttons: {
-        "Create Entity": function() {
-          var bValid = true;
-          allFields.removeClass( "ui-state-error" );
-          if ( bValid ) {
-            $( "#users tbody" ).append( "<tr>" +
-              "<td>" + name.val() + "</td>" +
-              "<td>" + email.val() + "</td>" +
-              "<td>" + password.val() + "</td>" +
-            "</tr>" );
-            $( this ).dialog( "close" );
-          }
-        },
-        Cancel: function() {
-          $( this ).dialog( "close" );
-        }
-      },
-      close: function() {
-        allFields.val( "" ).removeClass( "ui-state-error" );
-      }
-    });
  
-    $( "#button_new_entity" )
-      .button()
-      .click(function() {
-        $( "#dialog_entity_form" ).dialog( "open" );
-      });  
-  
-    
-    $( "#dialog_field_form" ).dialog({
-        autoOpen: false,
-        height: 300,
-        width: 350,
-        modal: true,
-        buttons: {
-          "Create Field": function() {
-            var bValid = true;
-            allFields.removeClass( "ui-state-error" );
-            if ( bValid ) {
-              $( "#users tbody" ).append( "<tr>" +
-                "<td>" + name.val() + "</td>" +
-                "<td>" + email.val() + "</td>" +
-                "<td>" + password.val() + "</td>" +
-              "</tr>" );
-              $( this ).dialog( "close" );
-            }
-          },
-          Cancel: function() {
-            $( this ).dialog( "close" );
-          }
-        },
-        close: function() {
-          allFields.val( "" ).removeClass( "ui-state-error" );
-        }
-      });
-   
-      $( "#button_new_field" )
-        .button()
-        .click(function() {
-          $( "#dialog_field_form" ).dialog( "open" );
-        });  
-    
-  
-  
-  
-  
-  
-  
-  
-  </script>
+	$(document).ready(function() {
+		$("#accordion").accordion();
+		$("#main_tabs").tabs();
+
+		$("#dialog_entity_form").dialog({
+			autoOpen : false,
+			height : 600,
+			width : 450,
+			modal : true,
+			close : function() {
+// 				allFields.val("").removeClass("ui-state-error");
+			}
+		});
+
+		$("#dialog_field_form").dialog({
+			autoOpen : false,
+			height : 600,
+			width : 450,
+			modal : true,
+			close : function() {
+// 				allFields.val("").removeClass("ui-state-error");
+			}
+		});
+
+		$("#button_new_field").click(function(e) {
+			$("#dialog_field_form").dialog("open");
+		});
+
+		$("#button_new_entity").button().click(function() {
+			$("#dialog_entity_form").dialog("open");
+		});
+
+	});
+</script>
 
 <style type="text/css">
 
 	#dialog_entity_form{
-/* 	    display:none; */
+/*  	    display:none; */
 	}
 	
 	#dialog_field_form{
-/* 	    display:none; */
+/*  	    display:none; */
 	}
 
+    #main_header{
+        width:100%;
+        height:50px;
+        border-bottom:2px solid gray;
+        margin-bottom: 8px;
+    }
+    
+    #main_header h1{
+        font-size:20px;
+    }
+    
+    #main_footer{
+        border-top:2px solid gray;
+        font-style: italic;
+        margin-top: 8px;
+    }
+    
+    .tab{
+        min-height: 400px;
+    }
+    
 </style>
 
 
 </head>
 <body>
 
+
+<div id="main_header"><h1>RooGo</h1></div>
 
 
 	<div id="main_tabs">
@@ -122,19 +96,19 @@
 			<li><a href="#tabs-4">Generated Code</a></li>
 		</ul>
 
-		<div id="tabs-1">
+		<div id="tabs-1" class="tab">
 			<p>JPA</p>
 		</div>
-		<div id="tabs-2">
+		<div id="tabs-2" class="tab">
 
-            <input type="button" value="Add new entity" id="button_new_entity" onClick=""/>
+            <button id="button_new_entity" onClick="" >Add new entity</button>
 
 			<div id="accordion">
 
 				<h3>Shop</h3>
 				<div>
 					<p>Fields ...</p>
-					<input type="button" value="Add new field" id="button_new_field" onClick=""/>
+                    <button id="button_new_field" >Add new field</button>
 				</div>
 
 				<h3>ShoppingCart</h3>
@@ -150,7 +124,8 @@
 
 
 		</div>
-		<div id="tabs-4">
+        <div id="tabs-3" class="tab"></div>
+        <div id="tabs-4" class="tab">
 			<pre>
 			tailor activate --name web-simple
 			// Create a new project
@@ -202,7 +177,7 @@
 
 			web mvc setup
 			web mvc all --package ~.web
-	</pre>
+	       </pre>
 		</div>
 
 
@@ -247,11 +222,8 @@
       
     </div>
  
- 
 
-<div id="dialog" title="Basic dialog">
-  <p>This is the default dialog which is useful for displaying information. The dialog window can be moved, resized and closed with the 'x' icon.</p>
-</div>
+<div id="main_footer"> @Copyright by RooGo team</div>
 
 </body>
 </html>
