@@ -1,0 +1,82 @@
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-02-01 12:05:20
+project --topLevelPackage com.acme.roogo --projectName roogo --java 6 --packaging WAR
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-02-01 12:05:21
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-02-01 12:05:23
+jpa setup --provider HIBERNATE --database POSTGRES
+entity jpa --class com.acme.roogo.domain.Project --testAutomatically 
+field string --fieldName projectName --notNull 
+field string --fieldName topLevelPackage --notNull 
+field string --fieldName java --notNull 
+enum type --class ~.domain.Packaging
+enum constant --name JAR
+enum constant --name WAR
+enum constant --name BUNDLE
+enum constant --name POM
+field enum --fieldName packaging --type ~.domain.Packaging --class ~.domain.Project --notNull 
+enum type --class ~.domain.Provider
+enum constant --name HIBERNATE
+enum constant --name ECLIPSELINK
+enum constant --name DATANUCLEUS
+enum constant --name OPENJPA
+field enum --fieldName provider --type ~.domain.Provider --class ~.domain.Project --notNull 
+enum type --class ~.domain.Database
+enum constant --name DATABASE_DOT_COM
+enum constant --name DB2_400
+enum constant --name DB2_EXPRESS_C
+enum constant --name DERBY_CLIENT
+enum constant --name DERBY_EMBEDDED
+enum constant --name FIREBIRD
+enum constant --name GOOGLE_APP_ENGINE
+enum constant --name H2_IN_MEMORY
+enum constant --name HYPERSONIC_IN_MEMORY
+enum constant --name HYPERSONIC_PERSISTENT
+enum constant --name MSSQL
+enum constant --name MYSQL
+enum constant --name ORACLE
+enum constant --name POSTGRES
+enum constant --name SYBASE
+field enum --fieldName database --type ~.domain.Database --class ~.domain.Project --notNull 
+entity jpa --class com.acme.roogo.domain.EntityJpa --testAutomatically 
+// [failed] field string --fieldName class --notNull 
+field string --fieldName entityClass --notNull 
+field boolean --fieldName testAutomatically
+entity jpa --class com.acme.roogo.domain.Field --testAutomatically 
+enum type --class ~.domain.RooType
+// [failed] enum constant --name BOOLEAN
+// [failed] enum constant --name DATE
+enum constant --name BOOLEAN_TYPE
+enum constant --name DATE_TYPE
+enum constant --name EMAIL_TYPE
+enum constant --name EMBEDDED_TYPE
+enum constant --name ENUM_TYPE
+enum constant --name FILE_TYPE
+enum constant --name NUMBER_TYPE
+enum constant --name OTHER_TYPE
+enum constant --name REFERENCE_TYPE
+enum constant --name SET_TYPE
+enum constant --name STRING_TYPE
+field enum --fieldName rooType --type ~.domain.RooType --class ~.domain.EntityJpa --notNull 
+entity jpa --class com.acme.roogo.domain.Switch --testAutomatically 
+field string --fieldName switchName --notNull
+field string --fieldName switchValue --notNull
+field set --fieldName switches --type ~.domain.Switch --class ~.domain.EntityJpa
+field set --fieldName switches --type ~.domain.Switch --class ~.domain.Field --cardinality ONE_TO_MANY 
+field set --fieldName entities --type ~.domain.EntityJpa --class ~.domain.Project --cardinality ONE_TO_MANY 
+field set --fieldName fields --type ~.domain.Field --class ~.domain.Project --cardinality ONE_TO_MANY 
+field reference --fieldName entity --type ~.domain.EntityJpa --class ~.domain.Field --notNull 
+field string --fieldName fieldName --notNull 
+// [failed] field string --fieldName package --class ~.domain.EntityJpa --notNull 
+field string --fieldName entityPackage --class ~.domain.EntityJpa --notNull 
+// [failed] entity jpa --class User --testAutomatically 
+// [failed] entity jpa --class ~.domain.User --testAutomatically 
+entity jpa --class ~.domain.RooGoUser --testAutomatically 
+field string --fieldName userName --notNull 
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-02-01 15:52:49
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-02-01 15:53:55
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-02-01 16:02:12
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-02-01 16:02:20
+field set --fieldName projects --type ~.domain.Project --class ~.domain.RooGoUser --cardinality ONE_TO_MANY 
+exit
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log closed at 2013-02-01 16:04:19
+// Spring Roo 1.2.2.RELEASE [rev 7d75659] log opened at 2013-02-01 16:14:35
