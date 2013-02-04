@@ -3,11 +3,11 @@
 
 package com.acme.roogo.domain;
 
-import com.acme.roogo.domain.Database;
-import com.acme.roogo.domain.Packaging;
+import com.acme.roogo.domain.JpaDatabaseEnum;
+import com.acme.roogo.domain.JpaProviderEnum;
+import com.acme.roogo.domain.PackagingEnum;
 import com.acme.roogo.domain.Project;
 import com.acme.roogo.domain.ProjectDataOnDemand;
-import com.acme.roogo.domain.Provider;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -37,7 +37,7 @@ privileged aspect ProjectDataOnDemand_Roo_DataOnDemand {
     }
     
     public void ProjectDataOnDemand.setDatabase(Project obj, int index) {
-        Database database = Database.class.getEnumConstants()[0];
+        JpaDatabaseEnum database = JpaDatabaseEnum.class.getEnumConstants()[0];
         obj.setDatabase(database);
     }
     
@@ -47,7 +47,7 @@ privileged aspect ProjectDataOnDemand_Roo_DataOnDemand {
     }
     
     public void ProjectDataOnDemand.setPackaging(Project obj, int index) {
-        Packaging packaging = Packaging.class.getEnumConstants()[0];
+        PackagingEnum packaging = PackagingEnum.class.getEnumConstants()[0];
         obj.setPackaging(packaging);
     }
     
@@ -57,7 +57,7 @@ privileged aspect ProjectDataOnDemand_Roo_DataOnDemand {
     }
     
     public void ProjectDataOnDemand.setProvider(Project obj, int index) {
-        Provider provider = Provider.class.getEnumConstants()[0];
+        JpaProviderEnum provider = JpaProviderEnum.class.getEnumConstants()[0];
         obj.setProvider(provider);
     }
     

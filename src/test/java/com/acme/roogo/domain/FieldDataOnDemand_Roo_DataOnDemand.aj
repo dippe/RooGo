@@ -7,7 +7,7 @@ import com.acme.roogo.domain.EntityJpa;
 import com.acme.roogo.domain.EntityJpaDataOnDemand;
 import com.acme.roogo.domain.Field;
 import com.acme.roogo.domain.FieldDataOnDemand;
-import com.acme.roogo.domain.RooType;
+import com.acme.roogo.domain.RooFieldTypeEnum;
 import java.security.SecureRandom;
 import java.util.ArrayList;
 import java.util.Iterator;
@@ -48,7 +48,7 @@ privileged aspect FieldDataOnDemand_Roo_DataOnDemand {
     }
     
     public void FieldDataOnDemand.setRooType(Field obj, int index) {
-        RooType rooType = RooType.class.getEnumConstants()[0];
+        RooFieldTypeEnum rooType = RooFieldTypeEnum.class.getEnumConstants()[0];
         obj.setRooType(rooType);
     }
     

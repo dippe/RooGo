@@ -1,0 +1,25 @@
+<aspectj>
+<aspects>
+<aspect name="com.acme.roogo.domain.FieldIntegrationTest_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.EntityJpaIntegrationTest_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.ProjectIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.acme.roogo.domain.SwitchIntegrationTest_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.RooGoUserDataOnDemand_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.RooGoUserDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.acme.roogo.domain.ProjectDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.acme.roogo.domain.FieldIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.acme.roogo.domain.EntityJpaDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.acme.roogo.domain.SwitchIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.acme.roogo.domain.FieldDataOnDemand_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.RooGoUserIntegrationTest_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.FieldDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.acme.roogo.domain.SwitchDataOnDemand_Roo_DataOnDemand"/>
+<aspect name="com.acme.roogo.domain.ProjectDataOnDemand_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.RooGoUserIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.acme.roogo.domain.EntityJpaIntegrationTest_Roo_IntegrationTest"/>
+<aspect name="com.acme.roogo.domain.SwitchDataOnDemand_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.ProjectIntegrationTest_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.EntityJpaDataOnDemand_Roo_Configurable"/>
+</aspects>
+</aspectj>
+

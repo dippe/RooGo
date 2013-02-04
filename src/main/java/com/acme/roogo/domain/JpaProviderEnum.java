@@ -1,7 +1,7 @@
 package com.acme.roogo.domain;
 
 
-public enum Provider {
+public enum JpaProviderEnum {
 
     HIBERNATE, ECLIPSELINK, DATANUCLEUS, OPENJPA;
 }

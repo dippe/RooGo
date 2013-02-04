@@ -1,13 +1,13 @@
 package com.acme.roogo.domain;
 
-public enum RooType {
+public enum RooFieldTypeEnum {
 
     BOOLEAN_TYPE("boolean"), DATE_TYPE("date"), EMAIL_TYPE("email"), EMBEDDED_TYPE("embedded"), ENUM_TYPE("enum"), FILE_TYPE(
             "file"), NUMBER_TYPE("number"), OTHER_TYPE("other"), REFERENCE_TYPE("reference"), SET_TYPE("set"), STRING_TYPE("string");
     
     private String rooType;
     
-    private RooType(String rooType){
+    private RooFieldTypeEnum(String rooType){
         this.rooType = rooType;
     }
     

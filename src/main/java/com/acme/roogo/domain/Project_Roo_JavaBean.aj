@@ -3,12 +3,12 @@
 
 package com.acme.roogo.domain;
 
-import com.acme.roogo.domain.Database;
 import com.acme.roogo.domain.EntityJpa;
 import com.acme.roogo.domain.Field;
-import com.acme.roogo.domain.Packaging;
+import com.acme.roogo.domain.JpaDatabaseEnum;
+import com.acme.roogo.domain.JpaProviderEnum;
+import com.acme.roogo.domain.PackagingEnum;
 import com.acme.roogo.domain.Project;
-import com.acme.roogo.domain.Provider;
 import java.util.Set;
 
 privileged aspect Project_Roo_JavaBean {
@@ -37,27 +37,27 @@ privileged aspect Project_Roo_JavaBean {
         this.java = java;
     }
     
-    public Packaging Project.getPackaging() {
+    public PackagingEnum Project.getPackaging() {
         return this.packaging;
     }
     
-    public void Project.setPackaging(Packaging packaging) {
+    public void Project.setPackaging(PackagingEnum packaging) {
         this.packaging = packaging;
     }
     
-    public Provider Project.getProvider() {
+    public JpaProviderEnum Project.getProvider() {
         return this.provider;
     }
     
-    public void Project.setProvider(Provider provider) {
+    public void Project.setProvider(JpaProviderEnum provider) {
         this.provider = provider;
     }
     
-    public Database Project.getDatabase() {
+    public JpaDatabaseEnum Project.getDatabase() {
         return this.database;
     }
     
-    public void Project.setDatabase(Database database) {
+    public void Project.setDatabase(JpaDatabaseEnum database) {
         this.database = database;
     }
     

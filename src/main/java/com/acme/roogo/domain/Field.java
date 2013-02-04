@@ -19,7 +19,7 @@ public class Field {
 
     @NotNull
     @Enumerated
-    private RooType rooType;
+    private RooFieldTypeEnum rooType;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<Switch> switches = new HashSet<Switch>();

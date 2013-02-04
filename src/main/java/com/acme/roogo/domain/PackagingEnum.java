@@ -1,7 +1,7 @@
 package com.acme.roogo.domain;
 
 
-public enum Packaging {
+public enum PackagingEnum {
 
     JAR, WAR, BUNDLE, POM;
 }

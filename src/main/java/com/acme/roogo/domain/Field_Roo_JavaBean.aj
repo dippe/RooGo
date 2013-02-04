@@ -5,17 +5,17 @@ package com.acme.roogo.domain;
 
 import com.acme.roogo.domain.EntityJpa;
 import com.acme.roogo.domain.Field;
-import com.acme.roogo.domain.RooType;
+import com.acme.roogo.domain.RooFieldTypeEnum;
 import com.acme.roogo.domain.Switch;
 import java.util.Set;
 
 privileged aspect Field_Roo_JavaBean {
     
-    public RooType Field.getRooType() {
+    public RooFieldTypeEnum Field.getRooType() {
         return this.rooType;
     }
     
-    public void Field.setRooType(RooType rooType) {
+    public void Field.setRooType(RooFieldTypeEnum rooType) {
         this.rooType = rooType;
     }
     

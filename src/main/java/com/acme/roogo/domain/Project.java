@@ -27,15 +27,15 @@ public class Project {
 
     @NotNull
     @Enumerated
-    private Packaging packaging;
+    private PackagingEnum packaging;
 
     @NotNull
     @Enumerated
-    private Provider provider;
+    private JpaProviderEnum provider;
 
     @NotNull
     @Enumerated
-    private Database database;
+    private JpaDatabaseEnum database;
 
     @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private Set<EntityJpa> entities = new HashSet<EntityJpa>();

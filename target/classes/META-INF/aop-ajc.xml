@@ -1,0 +1,29 @@
+<aspectj>
+<aspects>
+<aspect name="com.acme.roogo.domain.EntityJpa_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.RooGoUser_Roo_JavaBean"/>
+<aspect name="com.acme.roogo.domain.Field_Roo_ToString"/>
+<aspect name="com.acme.roogo.domain.Switch_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.acme.roogo.domain.EntityJpa_Roo_Jpa_Entity"/>
+<aspect name="com.acme.roogo.domain.EntityJpa_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.acme.roogo.domain.Field_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.Field_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.acme.roogo.domain.Project_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.acme.roogo.domain.RooGoUser_Roo_ToString"/>
+<aspect name="com.acme.roogo.domain.RooGoUser_Roo_Jpa_Entity"/>
+<aspect name="com.acme.roogo.domain.RooGoUser_Roo_Jpa_ActiveRecord"/>
+<aspect name="com.acme.roogo.domain.Project_Roo_JavaBean"/>
+<aspect name="com.acme.roogo.domain.Field_Roo_JavaBean"/>
+<aspect name="com.acme.roogo.domain.EntityJpa_Roo_ToString"/>
+<aspect name="com.acme.roogo.domain.Switch_Roo_JavaBean"/>
+<aspect name="com.acme.roogo.domain.Project_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.Switch_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.Project_Roo_Jpa_Entity"/>
+<aspect name="com.acme.roogo.domain.Switch_Roo_Jpa_Entity"/>
+<aspect name="com.acme.roogo.domain.RooGoUser_Roo_Configurable"/>
+<aspect name="com.acme.roogo.domain.EntityJpa_Roo_JavaBean"/>
+<aspect name="com.acme.roogo.domain.Project_Roo_ToString"/>
+<aspect name="com.acme.roogo.domain.Field_Roo_Jpa_Entity"/>
+</aspects>
+</aspectj>
+
