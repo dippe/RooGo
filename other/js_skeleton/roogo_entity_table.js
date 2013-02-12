@@ -1,12 +1,21 @@
 
 (function(namespace){
 
-    function createSwitchListHtml( switchArr ){
+    function createFieldListHtml( fields ){
 
     }
 
-    function createFieldListHtml( switchArr ){
+    function createSwitchListHtml( switches ){
+        var switchStr = "";
+        for (var k=0; k<switches.length; k++ ){
+            currSwitch = switches[k];
+            var tmpStr = currSwitch.switchName + " " + currSwitch.switchValue;
+            console.log("switch:" + tmpStr);
+            switchStr += "<li id=\"rg_switch_" + currSwitch.id + "\">" + tmpStr + " <span id=\"rg_rm_switch_" + currSwitch.id + "\">remove</span></li>\n";
+        }
+        switchStr = "<ul>" + switchStr + "</ul>";
 
+        return switchStr;
     }
 
     function createEntityListHtml( entityArr ){
@@ -21,19 +30,12 @@
                 currField = currEntity.fields[j];
                 console.log("field:" + currField.fieldName);
                 var fieldStr = "";
-                fieldStr += "<div>";
+                fieldStr += "<div id=\"rg_field_" + currField.id + "\">";
                 fieldStr += "Field name: " + currField.fieldName;
                 fieldStr += " Roo Type: " + currField.rooType;
                 fieldStr += " Java Type: " + currField.javaType;
 
-                var switchStr = "";
-                for (var k=0; k<currField.switches.length; k++ ){
-                    currSwitch = currField.switches[k];
-                    var tmpStr = currSwitch.switchName + " " + currSwitch.switchValue;
-                    console.log("switch:" + tmpStr);
-                    switchStr += "<li>" + tmpStr + " <span onClick=\"removeSwitch(" + currSwitch.id + ")\">remove</span></li>\n";
-                }
-                switchStr = "<ul>" + switchStr + "</ul>";
+                switchStr = createSwitchListHtml( currField.switches );
 
                 fieldStr += switchStr + "</div>";
             }
@@ -47,20 +49,6 @@
 
         return entityListStr;
     }
-
-    function removeSwitch( id ){
-        alert( "remove switch:" + id );
-    }
-
-    function removeEntity( id ){
-        alert( "remove entity:" + id );
-    }
-
-    function removeField( id ){
-        alert( "remove field:" + id );
-    }
-
-
 
     namespace.createEntityListHtml = createEntityListHtml;
     namespace.createFieldListHtml = createFieldListHtml;
